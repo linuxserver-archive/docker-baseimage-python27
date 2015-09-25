@@ -1,5 +1,5 @@
 FROM linuxserver/baseimage
-MAINTAINER Mark Burford <sparklyballs@gmail.com>
+MAINTAINER sparklyballs <sparklyballs@linuxserver.io>
 
 ENV BASE_APTLIST="git-core libffi-dev libssl-dev python python-cherrypy python-dev python-lxml python-pip unrar unzip wget"
 
