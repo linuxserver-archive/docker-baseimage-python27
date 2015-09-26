@@ -2,10 +2,12 @@ FROM linuxserver/baseimage
 MAINTAINER sparklyballs <sparklyballs@linuxserver.io>
 
 ENV BASE_APTLIST="git-core libffi-dev libssl-dev python python-cherrypy python-dev python-lxml python-pip unrar unzip wget"
+ENV PYTHONIOENCODING="UTF-8" 
 
 # install main packages
 RUN apt-get update -q && \
 apt-get install $BASE_APTLIST -qy && \
+
 
 #install pip packages
 pip install -U pip && \
