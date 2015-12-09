@@ -14,6 +14,7 @@ apt-get install $BASE_APTLIST -qy && \
 
 #install pip packages
 pip install pip-review && \
+pip install -U pip && \
 
 # cleanup 
 apt-get clean -y && \
