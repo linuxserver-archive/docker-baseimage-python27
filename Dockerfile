@@ -14,7 +14,8 @@ apt-get install $BASE_APTLIST -qy && \
 
 #install pip packages
 pip install pip-review && \
-
+#Update any packages now
+pip-review --local --auto && \
 # cleanup 
 apt-get clean -y && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
