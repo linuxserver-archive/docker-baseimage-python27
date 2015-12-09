@@ -1,6 +1,6 @@
 FROM linuxserver/baseimage
 MAINTAINER sparklyballs <sparklyballs@linuxserver.io>
-ENV BASE_APTLIST="git-core libffi-dev libssl-dev python2.7 python-cherrypy python-dev python-lxml python-pip unrar unzip wget"
+ENV BASE_APTLIST="git-core libffi-dev libiffi6 libpython-dev libssl-dev python2.7 python-cherrypy python2.7-dev python-lxml python-pip unrar unzip wget"
 #ENV PYTHONIOENCODING="UTF-8" 
 
 # install main packages
