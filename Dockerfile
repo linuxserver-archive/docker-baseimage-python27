@@ -14,7 +14,7 @@ apt-get install $BASE_APTLIST -qy && \
 
 #install pip packages
 pip install pip-review && \
-pip install -U pip && \
+pip install -U pip pyopenssl ndg-httpsclient virtualenv && \
 
 # cleanup 
 apt-get clean -y && \
