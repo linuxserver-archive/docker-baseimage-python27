@@ -1,19 +1,16 @@
 FROM linuxserver/baseimage
 MAINTAINER sparklyballs <sparklyballs@linuxserver.io>
-ENV BASE_APTLIST="git-core libffi-dev libiffi6 libpython-dev libssl-dev python2.7 python-cherrypy python2.7-dev python-lxml python-pip unrar unzip wget"
+ENV BASE_APTLIST="libxlt1-dev git-core libffi-dev libiffi6 libpython-dev libssl-dev python2.7 python-cherrypy python2.7-dev python-lxml python-pip unrar unzip wget"
 #ENV PYTHONIOENCODING="UTF-8" 
-
+ADD 21_pip_update.sh /etc/my_init.d/21_pip_update.sh
 # install main packages
-RUN apt-get update -q && \
-add-apt-repository ppa:fkrull/deadsnakes-python2.7 && \
+RUN add-apt-repository ppa:fkrull/deadsnakes-python2.7 && \
+apt-get update -q && \
 apt-get install $BASE_APTLIST -qy && \
 
 
 #install pip packages
-pip install -U pip && \
-pip install -U virtualenv && \
-pip install -U pyopenssl && \
-pip install -U ndg-httpsclient && \
+pip install pip-review && \
 
 # cleanup 
 apt-get clean -y && \
