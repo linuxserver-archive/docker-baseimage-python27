@@ -18,6 +18,14 @@ tar xvf /tmp/requests.tar.gz -C /tmp/request_source --strip-components=1 && \
 cd /tmp/request_source && \
 python setup.py install && \
 
+# upgrade urllib3 package
+curl -o /tmp/urllib3.tar.gz -L https://pypi.python.org/packages/source/u/urllib3/urllib3-1.14.tar.gz && \
+mkdir -p /tmp/urllib3_source && \
+tar xvf /tmp/urllib3.tar.gz -C /tmp/urllib3_source --strip-components=1 && \
+cd /tmp/urllib3_source && \
+make && \
+make install && \
+
 #install pip packages
 pip install pip-review && \
 pip install -U pip pyopenssl ndg-httpsclient virtualenv && \
