@@ -1,6 +1,6 @@
 FROM linuxserver/baseimage
 MAINTAINER sparklyballs <sparklyballs@linuxserver.io>
-ENV BASE_APTLIST="libxslt1-dev git-core libffi-dev libffi6 libpython-dev libssl-dev python2.7 python-cherrypy python-lxml python-pip unrar unzip wget"
+ENV BASE_APTLIST="libxslt1-dev git-core libffi-dev libffi6 libpython-dev libssl-dev python2.7 python-cherrypy python-lxml python-pip python2.7-dev unrar unzip wget"
 
 #ENV PYTHONIOENCODING="UTF-8" 
 ADD 21_pip_update.sh /etc/my_init.d/21_pip_update.sh
