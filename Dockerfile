@@ -1,6 +1,6 @@
 FROM linuxserver/baseimage
 MAINTAINER sparklyballs <sparklyballs@linuxserver.io>
-ENV BASE_APTLIST="libxslt1-dev git-core libffi-dev libffi6 libpython-dev libssl-dev python2.7 python-cherrypy python2.7-dev python-lxml python-pip unrar unzip wget"
+ENV BASE_APTLIST="build-essential libxslt1-dev git-core libffi-dev libffi6 libpython-dev libssl-dev python2.7 python-cherrypy python-lxml python-pip unrar unzip wget"
 
 #ENV PYTHONIOENCODING="UTF-8" 
 ADD 21_pip_update.sh /etc/my_init.d/21_pip_update.sh
@@ -14,7 +14,7 @@ apt-get install $BASE_APTLIST -qy && \
 
 #install pip packages
 pip install pip-review && \
-pip install -U pip pyopenssl ndg-httpsclient virtualenv && \
+pip install -U pip request pyopenssl ndg-httpsclient virtualenv && \
 
 # cleanup 
 apt-get clean -y && \
