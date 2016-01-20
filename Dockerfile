@@ -23,8 +23,7 @@ curl -o /tmp/urllib3.tar.gz -L https://pypi.python.org/packages/source/u/urllib3
 mkdir -p /tmp/urllib3_source && \
 tar xvf /tmp/urllib3.tar.gz -C /tmp/urllib3_source --strip-components=1 && \
 cd /tmp/urllib3_source && \
-make && \
-make install && \
+python setup.py install && \
 
 #install pip packages
 pip install pip-review && \
